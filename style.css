@@ -1,15 +1,37 @@
+:root{
+    --white: #ffffff;
+    --cultured: hsl(225, 20%, 96%);
+    --onyx: hsl(207, 8%, 21%);;
+    --gray-white: #F2F2F2;
+    --gray: #333333;
+    --gray-medium: #E4E4E4;
+    --gray-strong: #cbcbcb;
+    --gray-semi-strong: #F6F5F6;
+    --black: #000000;
+    --blue-lite: #DCE6FA;
+    --blue-main: #3462E3;
+    --blue-dark: #1E3A8A;
+    --blue-full-dark: #253985;
+    --blue-alternative: #96C8FF;
+    --blue-death: #F5FAFF;
+    --gray-main: #6B7280;
+}
+
 html{
     font-family: 'Be Vietnam Pro', sans-serif;
     scroll-behavior: smooth;
 }
 
-body{
+*, *::before, *::after{
     margin: 0;
     padding: 0;
-    background-color: white;
 }
 
-.inline-container{
+a{
+    text-decoration: none;
+}
+
+.--inline-container{
     /*
         Display funciona para x
         align-items hace x
@@ -22,15 +44,98 @@ body{
     padding-inline: 42px;
 }
 
+.--block-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    font-size: 18px;
+}
+
+header{
+    background-color: var(--white);
+    height: 72px;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
 nav{
     display: flex;
     align-items: center;
     gap: 18px;
 }
 
-.--button{
+.--link{
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+.--button, .--button-white{
     display: flex;
     padding-inline: 16px;
     padding-block: 8px;
     border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    color: #000;
+}
+
+.--button-white{
+    width: fit-content;
+    padding-block: 12px;
+    padding-inline: 32px;
+    background-color: var(--white);
+    color: var(--blue-main);
+}
+
+.--title{
+    font-size: 60px;
+    color: white;
+}
+
+.--desc{
+    font-size: 20px;
+    color: white;
+}
+
+/* Modificadores */
+.--gap-8{
+    gap: 8px;
+}
+
+.--gap-10{
+    gap: 10px;
+}
+
+.--gap-12{
+    gap: 12px;
+}
+
+.--no-beetwen{
+    justify-content: initial;
+}
+
+.--no-padding-inline{
+    padding-inline: initial;
+}
+
+/* HERO */
+.hero{
+    display: flex;
+    background-color: #3462E3;
+}
+
+.first-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-inline: 160px;
+    padding-block: 140px;
 }
